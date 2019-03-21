@@ -5,6 +5,8 @@
  */
 package dao;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 /**
@@ -22,7 +24,7 @@ public class PersistenceUtil {
         
         if(emf == null)
             emf = Persistence.createEntityManagerFactory("exemploJPAPU");
-        return emf.creatEntityManager();
+        return emf.createEntityManager();
     }
     
     public static void close (EntityManager em){

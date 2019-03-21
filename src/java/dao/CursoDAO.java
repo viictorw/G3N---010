@@ -8,7 +8,8 @@ package dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.PersistenceUtil;
+import javax.persistence.TypedQuery;
+
 import model.Curso;
 
 /**
@@ -17,7 +18,7 @@ import model.Curso;
  */
 public class CursoDAO {
 
-    private static CursoDAO instance = new ProfessorDAO();
+    private static CursoDAO instance = new CursoDAO();
 
     public static CursoDAO getInstance() {
         return instance;
@@ -70,6 +71,7 @@ public class CursoDAO {
     public Curso getCurso(long id) {
         EntityManager em = PersistenceUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
+        Curso curso = null;
 
         try {
             tx.begin();

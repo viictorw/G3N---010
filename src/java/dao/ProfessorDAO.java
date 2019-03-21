@@ -8,7 +8,9 @@ package dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.PersistenceUtil;
+import javax.persistence.TypedQuery;
+
+
 import model.Professor;
 
 /**
@@ -70,7 +72,7 @@ public class ProfessorDAO {
     public Professor getProfessor(long id) {
         EntityManager em = PersistenceUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
-
+        Professor professor = null;
         try {
             tx.begin();
             professor = em.find(Professor.class, id);

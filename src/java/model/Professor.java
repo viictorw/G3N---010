@@ -23,9 +23,14 @@ public class Professor {
     private String nome;
     
     
-    public Professor(){
-        
+
+    
+
+    public Professor(String nome) {
+        this.nome = nome;
     }
+
+   
 
     public Long getId() {
         return id;
