@@ -5,12 +5,12 @@
  */
 package dao;
 
+
+
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
-
-
 import model.Professor;
 
 /**
@@ -32,6 +32,7 @@ public class ProfessorDAO {
     public void salvar(Professor professor) {
         EntityManager em = PersistenceUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
+        
 
         try {
             tx.begin();
@@ -94,8 +95,7 @@ public class ProfessorDAO {
         List<Professor> professores = null;
         try {
             tx.begin();
-            TypedQuery<Professor> query
-                    = em.createQuery("select p from Professor p", Professor.class);
+            TypedQuery<Professor> query= em.createQuery("select p From Professor p", Professor.class);
             professores = query.getResultList();
             tx.commit();
         } catch (Exception e) {

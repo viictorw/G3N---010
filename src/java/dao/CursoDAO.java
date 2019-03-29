@@ -19,7 +19,6 @@ import model.Curso;
 public class CursoDAO {
 
     private static CursoDAO instance = new CursoDAO();
-
     public static CursoDAO getInstance() {
         return instance;
 
@@ -94,8 +93,7 @@ public class CursoDAO {
         List<Curso> cursos = null;
         try {
             tx.begin();
-            TypedQuery<Curso> query
-                    = em.createQuery("select p from Curso p", Curso.class);
+            TypedQuery<Curso> query = em.createQuery("select c From Curso c", Curso.class);
             cursos = query.getResultList();
             tx.commit();
         } catch (Exception e) {
