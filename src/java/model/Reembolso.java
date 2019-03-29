@@ -10,27 +10,35 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  *
  * @author viict
  */
 @Entity
-public class Professor implements Serializable {
+
+public class Reembolso implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
-    private String nome;
+    private String estado;
+    @ManyToOne
+    private Pagamento pagamento;
 
-    public Professor(String nome) {
-        this.nome = nome;
+    public Reembolso() {
     }
 
-    public Professor() {
+    public Reembolso(Long id, String estado, Pagamento pagamento) {
+        this.id = id;
+        this.estado = estado;
+        this.pagamento = pagamento;
     }
 
+    
     public Long getId() {
         return id;
     }
@@ -39,12 +47,20 @@ public class Professor implements Serializable {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public Pagamento getPagamento() {
+        return pagamento;
+    }
+
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
     }
 
 }
