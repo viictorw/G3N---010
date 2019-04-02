@@ -9,35 +9,32 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
-import model.Espaco;
+import model.Disponibilidadee;
 
 /**
  *
- * @author viict
+ * @author iza
  */
-public class EspaccoDAO {
-
-    private static EspaccoDAO instance = new EspaccoDAO();
-
-    public static EspaccoDAO getInstance() {
+public class DisponibilidadeeDAO {
+        private static DisponibilidadeeDAO instance = new DisponibilidadeeDAO();
+    public static DisponibilidadeeDAO getInstance() {
         return instance;
 
     }
 
-    private EspaccoDAO() {
+    private DisponibilidadeeDAO() {
     }
 
-    public void salvar(Espaco espaco) {
-
+    public void salvar(Disponibilidadee disponibilidade) {
         EntityManager em = PersistenceUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
 
         try {
             tx.begin();
-            if (espaco.getId() != null) {
-                em.merge(espaco);
+            if (disponibilidade.getId() != null) {
+                em.merge(disponibilidade);
             } else {
-                em.persist(espaco);
+                em.persist(disponibilidade);
             }
             tx.commit();
         } catch (Exception e) {
@@ -50,13 +47,13 @@ public class EspaccoDAO {
         }
     }
 
-    public void excluir(Espaco espaco) {
+    public void excluir(Disponibilidadee disponibilidade) {
         EntityManager em = PersistenceUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
 
         try {
             tx.begin();
-            em.remove(em.getReference(Espaco.class, espaco.getId()));
+            em.remove(em.getReference(Disponibilidadee.class, disponibilidade.getId()));
             tx.commit();
         } catch (Exception e) {
             if (tx != null && tx.isActive()) {
@@ -68,14 +65,14 @@ public class EspaccoDAO {
         }
     }
 
-    public Espaco getEspaco(long id) {
+    public Disponibilidadee getDisponibilidade(long id) {
         EntityManager em = PersistenceUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
-        Espaco espaco = null;
+        Disponibilidadee disponibilidade = null;
 
         try {
             tx.begin();
-            espaco = em.find(Espaco.class, id);
+            disponibilidade = em.find(Disponibilidadee.class, id);
             tx.commit();
         } catch (Exception e) {
             if (tx != null && tx.isActive()) {
@@ -85,17 +82,17 @@ public class EspaccoDAO {
         } finally {
             PersistenceUtil.close(em);
         }
-        return espaco;
+        return disponibilidade;
     }
 
-    public List<Espaco> getAllEspacos() {
+    public List<Disponibilidadee> getAllDisponibilidades() {
         EntityManager em = PersistenceUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
-        List<Espaco> espacos = null;
+        List<Disponibilidadee> disponibilidades = null;
         try {
             tx.begin();
-            TypedQuery<Espaco> query = em.createQuery("select es From Espaco es", Espaco.class);
-            espacos = query.getResultList();
+            TypedQuery<Disponibilidadee> query = em.createQuery("select c From Disponibilidade c", Disponibilidadee.class);
+            disponibilidades = query.getResultList();
             tx.commit();
         } catch (Exception e) {
             if (tx != null && tx.isActive()) {
@@ -105,6 +102,6 @@ public class EspaccoDAO {
         } finally {
             PersistenceUtil.close(em);
         }
-        return espacos;
+        return disponibilidades;
     }
 }

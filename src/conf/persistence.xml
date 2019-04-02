@@ -7,6 +7,8 @@
     <class>model.Cliente</class>
     <class>model.Contato</class>
     <class>model.Cartao</class>
+    <class>model.Espaco</class>
+    <!--<class>model.Disponibilidadee</class>-->
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/gen"/>
