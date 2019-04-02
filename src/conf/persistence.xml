@@ -5,6 +5,7 @@
     <class>model.Professor</class>
     <class>model.Curso</class>
     <class>model.Cliente</class>
+    <class>model.Contato</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/gen"/>

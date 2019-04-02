@@ -6,11 +6,13 @@
 package controller;
 
 import dao.ClienteDAO;
+import dao.ContatoDAO;
 import dao.CursoDAO;
 import dao.EspaccoDAO;
 import dao.ProfessorDAO;
 import dao.ReservaDAO;
 import model.Cliente;
+import model.Contato;
 import model.Curso;
 import model.Espaco;
 import model.Professor;
@@ -49,8 +51,11 @@ public class testeJPA {
         Curso curso = new Curso ("Eng Computacao", 3000, "Graducao", 10, professor );
         CursoDAO.getInstance().salvar(curso);
         
-        Cliente cliente = new Cliente("André", "Torres", "123456", "13/03/1994", "Andre@gmail.com", "Mamona", curso);
+        Cliente cliente = new Cliente("Andrézinho", "Torreões", "123456", "13/03/1994", "Andre@gmail.com", "Mamona", curso);
         ClienteDAO.getInstance().salvar(cliente);
+        
+        Contato contato = new Contato("321654", cliente);
+        ContatoDAO.getInstance().salvar(contato);
          
     }
 
