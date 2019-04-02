@@ -5,12 +5,14 @@
  */
 package controller;
 
+import dao.CartaoDAO;
 import dao.ClienteDAO;
 import dao.ContatoDAO;
 import dao.CursoDAO;
 import dao.EspaccoDAO;
 import dao.ProfessorDAO;
 import dao.ReservaDAO;
+import model.Cartao;
 import model.Cliente;
 import model.Contato;
 import model.Curso;
@@ -57,6 +59,8 @@ public class testeJPA {
         Contato contato = new Contato("321654", cliente);
         ContatoDAO.getInstance().salvar(contato);
          
+        Cartao cartao = new Cartao("visa", "01/03/2022", "856", cliente);//Por que isso não funciona com Long????????????????????????????????AAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+        CartaoDAO.getInstance().salvar(cartao);
     }
 
 }
