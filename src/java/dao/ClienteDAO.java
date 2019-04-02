@@ -9,26 +9,25 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
+
 import model.Cliente;
 
 /**
  *
  * @author viict
  */
-public class ClienteeDAO {
+public class ClienteDAO {
 
-    private static ClienteeDAO instance = new ClienteeDAO();
-
-    public static ClienteeDAO getInstance() {
+    private static ClienteDAO instance = new ClienteDAO();
+    public static ClienteDAO getInstance() {
         return instance;
 
     }
 
-    private ClienteeDAO() {
+    private ClienteDAO() {
     }
 
     public void salvar(Cliente cliente) {
-
         EntityManager em = PersistenceUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
 
@@ -88,7 +87,7 @@ public class ClienteeDAO {
         return cliente;
     }
 
-    public List<Cliente> getAllClientees() {
+    public List<Cliente> getAllClientes() {
         EntityManager em = PersistenceUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
         List<Cliente> clientes = null;
@@ -107,4 +106,5 @@ public class ClienteeDAO {
         }
         return clientes;
     }
+
 }

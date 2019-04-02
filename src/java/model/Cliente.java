@@ -10,6 +10,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+
 
 /**
  *
@@ -29,17 +32,21 @@ public class Cliente implements Serializable{
     private String dataNascimento;
     private String email;
     private String senha;
+    @ManyToOne
+    private Curso curso;
 
     public Cliente() {
     }
 
-    public Cliente(String nome, String sobrenome, String cpf, String dataNascimento, String email, String senha) {
+    public Cliente(String nome, String sobrenome, String cpf, String dataNascimento, String email, String senha, Curso curso) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
         this.email = email;
         this.senha = senha;
+        this.curso = curso;
+
     }
 
     
@@ -100,6 +107,14 @@ public class Cliente implements Serializable{
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
     }
     
     
