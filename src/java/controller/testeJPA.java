@@ -12,6 +12,7 @@ import dao.CursoDAO;
 import dao.DisponibilidadeeDAO;
 import dao.EspacoDAO;
 import dao.IrregularidadeDAO;
+import dao.ModalidadeDAO;
 import dao.ProfessorDAO;
 import model.Cartao;
 import model.Cliente;
@@ -20,6 +21,7 @@ import model.Curso;
 import model.Disponibilidadee;
 import model.Espaco;
 import model.Irregularidade;
+import model.Modalidade;
 import model.Professor;
 
 /**
@@ -72,6 +74,11 @@ public class testeJPA {
         
         //Irregularidade irregularidade = new Irregularidade("Matim", "Ocorreu o seguinte problema", espaco);
         //IrregularidadeDAO.getInstance().salvar(irregularidade);
+        
+        Modalidade modalidade = new Modalidade("Skateeee", "skaiteros");
+        ModalidadeDAO.getInstance().salvar(modalidade);
+        
+        
     }
 
 }
