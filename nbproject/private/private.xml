@@ -5,6 +5,7 @@
         <group>
             <file>file:/home/iza/G3N---010/src/java/controller/testeJPA.java</file>
             <file>file:/home/iza/G3N---010/src/conf/persistence.xml</file>
+            <file>file:/home/iza/G3N---010/src/java/model/Espaco.java</file>
             <file>file:/home/iza/G3N---010/src/java/dao/PersistenceUtil.java</file>
             <file>file:/home/iza/G3N---010/src/java/model/Cartao.java</file>
             <file>file:/home/iza/G3N---010/src/java/dao/ClienteDAO.java</file>

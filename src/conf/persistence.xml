@@ -8,6 +8,7 @@
     <class>model.Contato</class>
     <class>model.Cartao</class>
     <class>model.Espaco</class>
+    <!--<class>model.Irregularidade<class>-->
     <!--<class>model.Disponibilidadee</class>-->
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>

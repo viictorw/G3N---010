@@ -11,6 +11,7 @@ import dao.ContatoDAO;
 import dao.CursoDAO;
 import dao.DisponibilidadeeDAO;
 import dao.EspacoDAO;
+import dao.IrregularidadeDAO;
 import dao.ProfessorDAO;
 import model.Cartao;
 import model.Cliente;
@@ -18,6 +19,7 @@ import model.Contato;
 import model.Curso;
 import model.Disponibilidadee;
 import model.Espaco;
+import model.Irregularidade;
 import model.Professor;
 
 /**
@@ -59,7 +61,7 @@ public class testeJPA {
         Contato contato = new Contato("321654", cliente);
         ContatoDAO.getInstance().salvar(contato);
          
-       Cartao cartao = new Cartao("visa", "01/03/2022", "856", cliente);//Por que isso não funciona com Long????????????????????????????????AAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+        Cartao cartao = new Cartao("visa", "01/03/2022", "856", cliente);//Por que isso não funciona com Long????????????????????????????????AAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
         CartaoDAO.getInstance().salvar(cartao);
         
         //Disponibilidadee disponibilidade = new Disponibilidadee("20/12/2019", "10:00", "18:00");
@@ -67,6 +69,9 @@ public class testeJPA {
        
         Espaco espaco = new Espaco("TesteLocalname", "12324", "36049120", "Alver juinoi", 123, "do outro lado", "esse mesmo", "juiz de fuera", "mg", 55.0, 450, "20:00", "06:00");
         EspacoDAO.getInstance().salvar(espaco);
+        
+        //Irregularidade irregularidade = new Irregularidade("Matim", "Ocorreu o seguinte problema", espaco);
+        //IrregularidadeDAO.getInstance().salvar(irregularidade);
     }
 
 }
