@@ -32,20 +32,19 @@ public class Cliente implements Serializable{
     private String dataNascimento;
     private String email;
     private String senha;
-    @ManyToOne
-    private Curso curso;
+
 
     public Cliente() {
     }
 
-    public Cliente(String nome, String sobrenome, String cpf, String dataNascimento, String email, String senha, Curso curso) {
+    public Cliente(String nome, String sobrenome, String cpf, String dataNascimento, String email, String senha) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
         this.email = email;
         this.senha = senha;
-        this.curso = curso;
+
 
     }
 
@@ -109,14 +108,6 @@ public class Cliente implements Serializable{
         this.senha = senha;
     }
 
-    public Curso getCurso() {
-        return curso;
-    }
-
-    public void setCurso(Curso curso) {
-        this.curso = curso;
-    }
-    
     
 
 }

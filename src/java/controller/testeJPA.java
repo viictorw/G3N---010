@@ -8,22 +8,18 @@ package controller;
 import dao.CartaoDAO;
 import dao.ClienteDAO;
 import dao.ContatoDAO;
-import dao.CursoDAO;
 import dao.DisponibilidadeeDAO;
 import dao.EspacoDAO;
 import dao.IrregularidadeDAO;
 import dao.ModalidadeDAO;
-import dao.ProfessorDAO;
 import dao.TipoEspacoDAO;
 import model.Cartao;
 import model.Cliente;
 import model.Contato;
-import model.Curso;
 import model.Disponibilidadee;
 import model.Espaco;
 import model.Irregularidade;
 import model.Modalidade;
-import model.Professor;
 import model.TipoEspaco;
 
 /**
@@ -34,7 +30,7 @@ public class testeJPA {
 
     public static void main(String[] args) {  
         
-        Cliente cliente = new Cliente("Andrézinho", "Torreões", "123456", "13/03/1994", "Andre@gmail.com", "Mamona", curso);
+        Cliente cliente = new Cliente("Andrézinho", "Torreões", "123456", "13/03/1994", "Andre@gmail.com", "Mamona");
         ClienteDAO.getInstance().salvar(cliente);
         
         Contato contato = new Contato("321654", cliente);
