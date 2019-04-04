@@ -33,23 +33,6 @@ import model.TipoEspaco;
 public class testeJPA {
 
     public static void main(String[] args) {
-
-        
-        /*INICIO TESTE - NÃO FUNCIONA AINDA
-        Espaco espaco = new Espaco("TesteLocalname", "12324", "36049120", "Alver juinoi", 123, "do outro lado", "esse mesmo", "juiz de fuera", "mg", 55.0, 450, "20:00", "06:00");
-        EspaccoDAO dao1 = EspaccoDAO.getInstance();
-        dao1.salvar(espaco);
-
-        Cliente cliente = new Cliente("Ze", "das Couves", "10531612473", "18/08/1994", "viictor.wagner@gmail.com", "123");
-        ClienteeDAO dao2 = ClienteeDAO.getInstance();
-        dao2.salvar(cliente);
-
-        Reserva reserva = new Reserva("10-04-2019", "05:05", "23:00", (long) 500, 1000.0, (long) 5, espaco, cliente);
-        ReservaDAO.getInstance().salvar(reserva);*/
-
-        /*FIM TESTE*/
-        
-        /* FUNCIONANDO*/
             
         Professor professor = new Professor("Jarvan");
         ProfessorDAO dao1 = ProfessorDAO.getInstance();
