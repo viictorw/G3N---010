@@ -32,15 +32,7 @@ import model.TipoEspaco;
  */
 public class testeJPA {
 
-    public static void main(String[] args) {
-            
-        Professor professor = new Professor("Jarvan");
-        ProfessorDAO dao1 = ProfessorDAO.getInstance();
-        dao1.salvar(professor);
-        
-        
-        Curso curso = new Curso ("Eng Computacao", 3000, "Graducao", 10, professor );
-        CursoDAO.getInstance().salvar(curso);
+    public static void main(String[] args) {  
         
         Cliente cliente = new Cliente("Andrézinho", "Torreões", "123456", "13/03/1994", "Andre@gmail.com", "Mamona", curso);
         ClienteDAO.getInstance().salvar(cliente);
