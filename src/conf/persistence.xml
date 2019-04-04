@@ -9,6 +9,7 @@
     <class>model.Cartao</class>
     <class>model.Espaco</class>
     <class>model.Modalidade</class>
+    <class>model.TipoEspaco</class>
     <!--<class>model.Irregularidade<class>-->
     <!--<class>model.Disponibilidadee</class>-->
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
