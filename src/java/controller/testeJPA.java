@@ -68,14 +68,14 @@ public class testeJPA {
         Cartao cartao = new Cartao("visa", "01/03/2022", "856", cliente);//Por que isso não funciona com Long????????????????????????????????AAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
         CartaoDAO.getInstance().salvar(cartao);
         
-        //Disponibilidadee disponibilidade = new Disponibilidadee("20/12/2019", "10:00", "18:00");
-        //DisponibilidadeeDAO.getInstance().salvar(disponibilidade);
+        Disponibilidadee disponibilidade = new Disponibilidadee("20/12/2019", "10:00", "18:00");
+        DisponibilidadeeDAO.getInstance().salvar(disponibilidade);
        
         Espaco espaco = new Espaco("TesteLocalname", "12324", "36049120", "Alver juinoi", 123, "do outro lado", "esse mesmo", "juiz de fuera", "mg", 55.0, 450, "20:00", "06:00");
         EspacoDAO.getInstance().salvar(espaco);
         
-        //Irregularidade irregularidade = new Irregularidade("Matim", "Ocorreu o seguinte problema", espaco);
-        //IrregularidadeDAO.getInstance().salvar(irregularidade);
+        Irregularidade irregularidade = new Irregularidade("Matim", "Ocorreu o seguinte problema", espaco);
+        IrregularidadeDAO.getInstance().salvar(irregularidade);
         
         Modalidade modalidade = new Modalidade("Skateeee", "skaiteros");
         ModalidadeDAO.getInstance().salvar(modalidade);

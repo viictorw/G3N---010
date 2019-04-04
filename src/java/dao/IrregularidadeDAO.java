@@ -13,7 +13,7 @@ import model.Irregularidade;
 
 /**
  *
- * @author iza
+ * @author Luis
  */
 public class IrregularidadeDAO {
        private static IrregularidadeDAO instance = new IrregularidadeDAO();

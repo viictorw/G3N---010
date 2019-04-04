@@ -14,7 +14,7 @@ import model.TipoEspaco;
 
 /**
  *
- * @author iza
+ * @author Luis
  */
 public class TipoEspacoDAO {
        private static TipoEspacoDAO instance = new TipoEspacoDAO();

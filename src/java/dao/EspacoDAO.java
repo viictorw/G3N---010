@@ -13,7 +13,7 @@ import model.Espaco;
 
 /**
  *
- * @author viict
+ * @author Luis
  */
 public class EspacoDAO {
 

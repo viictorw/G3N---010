@@ -13,7 +13,7 @@ import model.Modalidade;
 
 /**
  *
- * @author iza
+ * @author Luis
  */
 public class ModalidadeDAO {
        private static ModalidadeDAO instance = new ModalidadeDAO();
